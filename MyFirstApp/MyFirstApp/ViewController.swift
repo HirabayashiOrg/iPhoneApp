@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // 遷移先の画面から元の画面に戻る関数
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+        // 画面を閉じるだけだから処理はなし
+    }
+    // labelのテキストを定義
+    @IBOutlet weak var myLabel: UILabel!
+    // ボタンを押した時の動作を記述
+    @IBAction func changeLabel(_ sender: Any) {
+        myLabel.text = "You changed me."
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
